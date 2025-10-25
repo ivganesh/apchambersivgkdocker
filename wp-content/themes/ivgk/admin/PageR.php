@@ -1646,8 +1646,9 @@ function BoardOfDirectorsPage()
 		.board-directors-img {
 			width: 100%;
 			height: 220px;
-			object-fit: cover;
-			object-position: center top;
+			object-fit: contain;
+			object-position: center;
+			background-color: #f8f9fa;
 		}
 		.board-directors-card {
 			height: 100%;
