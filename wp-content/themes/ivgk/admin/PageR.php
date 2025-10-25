@@ -1640,8 +1640,38 @@ add_shortcode("BoardOfDirectorsPage", "BoardOfDirectorsPage");
 function BoardOfDirectorsPage()
 {
 	global $wpdb;
+	
+	// Add CSS for consistent image sizing
+	echo '<style>
+		.board-directors-img {
+			width: 100%;
+			height: 220px;
+			object-fit: cover;
+			object-position: center top;
+		}
+		.board-directors-card {
+			height: 100%;
+		}
+		.board-directors-card-body {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		.board-directors-img-container {
+			flex-shrink: 0;
+		}
+		.board-directors-info {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	</style>';
+	
 	$designationTable = "{$wpdb->prefix}chamber_designation";
 	$userTable = "{$wpdb->prefix}users";
+	$defaultImage = get_site_url().'/default-user.png';
+	
 	$executiveMembers = $wpdb->get_results( "SELECT {$userTable}.*,
 													{$designationTable}.Chamber_Designation as chamberDesi
 										FROM {$userTable}
@@ -1656,12 +1686,15 @@ function BoardOfDirectorsPage()
 		echo '<div class="row mt-2">';
 		foreach( $executiveMembers as $member )
 		{
+			$profileImage = (!empty($member['userProfile_1'])) ? $member['userProfile_1'] : $defaultImage;
 			?>
 				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
-					<div class="card shadow">
-						<div class="card-body  text-center">
-							<img style="width:75%" src="<?=$member['userProfile_1'] ;?>" />
-							<div class="border">
+					<div class="card shadow board-directors-card">
+						<div class="card-body text-center board-directors-card-body">
+							<div class="board-directors-img-container">
+								<img class="board-directors-img" src="<?=$profileImage;?>" alt="<?=$member['Applicant_Name'];?>" />
+							</div>
+							<div class="border board-directors-info">
 								<h5 style="float:none" class="mt-2 card-title text-center">
 									<b><?=$member['Applicant_Name'] ;?></b></h5>
 								<p class="card-text mt-2 text-center"><?=$member['chamberDesi'] ;?></p>
@@ -1688,12 +1721,15 @@ function BoardOfDirectorsPage()
 		echo '<div class="row mt-2">';
 		foreach( $executiveMembers as $member )
 		{
+			$profileImage = (!empty($member['userProfile_1'])) ? $member['userProfile_1'] : $defaultImage;
 			?>
 				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
-					<div class="card shadow">
-						<div class="card-body  text-center">
-							<img style="width:70%" src="<?=$member['userProfile_1'] ;?>" />
-							<div class="border">
+					<div class="card shadow board-directors-card">
+						<div class="card-body text-center board-directors-card-body">
+							<div class="board-directors-img-container">
+								<img class="board-directors-img" src="<?=$profileImage;?>" alt="<?=$member['Applicant_Name'];?>" />
+							</div>
+							<div class="border board-directors-info">
 								<h5 style="float:none" class="mt-2 card-title text-center">
 									<b><?=$member['Applicant_Name'] ;?></b></h5>
 								<p class="card-text mt-2 text-center"><?=$member['chamberDesi'] ;?></p>
