@@ -21,7 +21,7 @@ $spam_email_patterns = [
     '%@gmail.com', '%@yahoo.com', '%@hotmail.com'  // Common disposable
 ];
 
-// Get spam users
+// Get spam users newly registered
 $spam_users = [];
 foreach ($spam_email_patterns as $pattern) {
     $users = $wpdb->get_results($wpdb->prepare("

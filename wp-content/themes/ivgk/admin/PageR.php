@@ -672,7 +672,7 @@ function PrintMediaPage()
 	}
 }
 
-// business excellence awards page
+// business excellence awards page this
 
 add_shortcode("BusinessExcellenceAwardsPage", "BusinessExcellenceAwardsPage");
 function BusinessExcellenceAwardsPage() {
