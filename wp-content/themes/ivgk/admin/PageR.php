@@ -3434,73 +3434,73 @@ function StateLevelCommittiePage()
 		array(
 			'name' => 'Affiliates Council',
 			'chair_name' => 'Dr. S Panduranga Prasad',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/drspandurangaprasad.jpg'
 		),
 		array(
 			'name' => 'Energy',
 			'chair_name' => 'Sri P Koti Rao',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/kotarao.jpg'
 		),
 		array(
 			'name' => 'Tourism',
 			'chair_name' => 'Sri Ramisetty Veeraswamy',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/ramisetty_veeraswamy.jpg'
 		),
 		array(
 			'name' => 'Retail',
 			'chair_name' => 'Sri Chukkapalli Sanketh',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/chukkapalli_sanketh.jpg'
 		),
 		array(
 			'name' => 'International Trade',
 			'chair_name' => 'Dr Murty Indrakanti',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/murtyindrakanti.jpg'
 		),
 		array(
 			'name' => 'Taxation (GST)',
 			'chair_name' => 'CA Ramakrishna Sangu',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/ramakrishnasangu.jpg'
 		),
 		array(
 			'name' => 'Food processing',
 			'chair_name' => 'Sri Krishna Prasad',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/krishna_prasad.jpg'
 		),
 		array(
 			'name' => 'Aqua & Marine',
 			'chair_name' => 'Sri V Sambasiva Rao',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/sambasivarao.jpg'
 		),
 		array(
 			'name' => 'Programmes (Events)',
 			'chair_name' => 'Smt. D Aparna',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/daparna.jpg'
 		),
 		array(
 			'name' => 'Banking & Finance',
 			'chair_name' => 'Sri A Satyanarayana',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/satyanarayana.jpg'
 		),
 		array(
 			'name' => 'Education',
 			'chair_name' => 'Smt. Suma Bindu Atluri',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/sumabindu.jpg'
 		),
 		array(
 			'name' => 'Skill Development',
 			'chair_name' => 'Smt. Radhika',
-			'chair_designation' => 'Chairman',
+			'chair_designation' => 'Chair',
 			'chair_image' => 'https://apchambers.in/wp-content/uploads/2025/10/radhika.jpg'
 		)
 	);
