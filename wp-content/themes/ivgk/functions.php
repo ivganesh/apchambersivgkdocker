@@ -339,9 +339,17 @@ function apchambers_include_only_approved_pages( $args, $post_type ) {
 // Clear sitemap cache when pages are updated
 add_action( 'save_post', 'apchambers_clear_sitemap_cache' );
 function apchambers_clear_sitemap_cache( $post_id ) {
-    // Clear sitemap cache
-    if ( function_exists( 'wp_sitemaps_get_server' ) ) {
-        wp_sitemaps_get_server()->renderer->cache->clear();
+    // Clear sitemap cache using proper WordPress API
+    if ( function_exists( 'wp_cache_delete' ) ) {
+        // Delete sitemap cache
+        wp_cache_delete( 'wp_get_sitemap_index', 'wp-sitemap' );
+        wp_cache_delete( 'wp_get_sitemap_posts', 'wp-sitemap' );
+        wp_cache_delete( 'wp_get_sitemap_pages', 'wp-sitemap' );
+    }
+    
+    // Also flush rewrite rules if available
+    if ( function_exists( 'flush_rewrite_rules' ) ) {
+        flush_rewrite_rules( false );
     }
 }
 

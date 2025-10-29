@@ -40,9 +40,10 @@ function MobileLoginPage($atts)
 					{
 						$memberName = 'member';
 						$userName = 'dummy';
-                      $Message = urlencode("{$otp} IS YOUR OTP TO LOGIN INTO APCHAMBERS , THANK YOU FOR USING IVGK SERVICES");
+                    //   $Message = urlencode("{$otp} IS YOUR OTP TO LOGIN INTO APCHAMBERS , THANK YOU FOR USING IVGK SERVICES");
+                      $Message = urlencode("Use this verification code {$otp} to verify your mobile number. Thank you for using our IVGK Services");
 						
-	
+                        
 						$curl = curl_init();
 						curl_setopt_array($curl, array(
 						  CURLOPT_URL => "https://api.mylogin.co.in/api/v2/SendSMS?ApiKey={$ApiKey}&ClientId={$ClientId}&SenderId={$SenderId}&Message={$Message}&MobileNumbers=91{$MobileNumbers}",
