@@ -1642,33 +1642,6 @@ function BoardOfDirectorsPage()
 	global $wpdb;
 	
 	// Add CSS for consistent image sizing
-	echo '<style>
-		.board-directors-img {
-			width: 100%;
-			height: 220px;
-			object-fit: contain;
-			object-position: center;
-			background-color: #f8f9fa;
-		}
-		.board-directors-card {
-			height: 100%;
-		}
-		.board-directors-card-body {
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-		}
-		.board-directors-img-container {
-			flex-shrink: 0;
-		}
-		.board-directors-info {
-			flex-grow: 1;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-	</style>';
-	
 	$designationTable = "{$wpdb->prefix}chamber_designation";
 	$userTable = "{$wpdb->prefix}users";
 	$defaultImage = get_site_url().'/default-user.png';
@@ -1888,10 +1861,12 @@ function PastLeadersPage()
 		{
 			?>
 				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
-					<div class="card shadow">
-						<div class="card-body  text-center">
-							<img style="width:100%" src="<?=$member['userProfile_1'] ;?>" />
-							<div class="border">
+					<div class="card shadow past-leaders-card">
+						<div class="card-body text-center past-leaders-card-body">
+							<div class="past-leaders-img-container">
+								<img class="past-leaders-img" src="<?=$member['userProfile_1'] ;?>" alt="<?=$member['Applicant_Name'];?>" />
+							</div>
+							<div class="border past-leaders-info">
 								<h5 style="float:none" class="mt-2 card-title text-center">
 									<b><?=$member['Applicant_Name'] ;?></b></h5>
 								<p class="card-text mt-2 text-center"><?=$member['Past_President_Year'] ;?></p>
@@ -1918,10 +1893,12 @@ function PastLeadersPage()
 		{
 			?>
 				<div class="col-sm-6 col-md-4 col-lg-3 p-2">
-					<div class="card shadow">
-						<div class="card-body  text-center">
-							<img style="width:100%" src="<?=$member['userProfile_1'] ;?>" />
-							<div class="border">
+					<div class="card shadow past-leaders-card">
+						<div class="card-body text-center past-leaders-card-body">
+							<div class="past-leaders-img-container">
+								<img class="past-leaders-img" src="<?=$member['userProfile_1'] ;?>" alt="<?=$member['Applicant_Name'];?>" />
+							</div>
+							<div class="border past-leaders-info">
 								<h5 style="float:none" class="mt-2 card-title text-center">
 									<b><?=$member['Applicant_Name'] ;?></b></h5>
 								<p class="card-text mt-2 text-center"><?=$member['Past_Secretary_Year'] ;?></p>

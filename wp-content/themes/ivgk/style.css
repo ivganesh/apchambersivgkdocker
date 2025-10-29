@@ -325,3 +325,149 @@ max-width: 200px;
     box-shadow: none;
 }
 /* Test comment to check git tracking */
+
+/* Past Leaders Card Styles - Equal Height */
+.past-leaders-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.past-leaders-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+}
+
+.past-leaders-img-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+}
+
+.past-leaders-img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.past-leaders-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Ensure consistent card heights in grid */
+.past-leaders-card .card-title {
+    min-height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.past-leaders-card .card-text {
+    min-height: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .past-leaders-img-container {
+        height: 230px;
+    }
+    .past-leaders-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .past-leaders-img-container {
+        height: 260px;
+    }
+    .past-leaders-img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Board of Directors Card Styles - Equal Height and Uniform Images */
+.board-directors-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.board-directors-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+}
+
+.board-directors-img-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+}
+
+.board-directors-img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.board-directors-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Ensure consistent card heights in grid */
+.board-directors-card .card-title {
+    min-height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board-directors-card .card-text {
+    min-height: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .board-directors-img-container {
+        height: 230px;
+    }
+    .board-directors-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .board-directors-img-container {
+        height: 260px;
+    }
+    .board-directors-img {
+        width: 220px;
+        height: 220px;
+    }
+}
